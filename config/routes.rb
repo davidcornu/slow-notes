@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :comments
   resources :todos
+  resources :top_charts, only: %i[index]
 
   resources :users do
     resources :todos, only: %i[index], controller: :user_todos

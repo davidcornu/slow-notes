@@ -1,0 +1,16 @@
+<h1>Most prolific users 🎉</h1>
+
+<table>
+    <thead>
+        <th>User</th>
+        <th>Interactions</th>
+    </thead>
+    <tbody>
+        <% @users_with_scores.each do |(user, score)| %>
+            <tr>
+                <td><%= link_to(user.name, user_path(user)) %></td>
+                <td><%= score %></td> 
+            </tr>
+        <% end %>
+    </tbody>
+</table>
