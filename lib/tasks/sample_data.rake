@@ -11,7 +11,7 @@ namespace(:sample_data) do
     end
 
     todos.each do |todo|
-      2.times do
+      rand(0..5).times do
         user = users.sample
         Comment.create!(user:, todo:, body: Faker::Quote.yoda)
       end
