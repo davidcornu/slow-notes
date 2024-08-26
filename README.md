@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample app to use as the basis for a talk on managing N+1 queries in Rails.
 
-Things you may want to cover:
+## Recommended setup
 
-* Ruby version
+Start this repo in codespace
 
-* System dependencies
+![](./docs/assets/codespace.png)
 
-* Configuration
+From the terminal you can then 
+1. Install the dependencies
 
-* Database creation
+    ```bash
+    bundle install
+    ```
+2. Setup the database
+    ```bash
+    rails db:setup
+    ```
+3. Load some sample data
+    ```bash
+    rails sample_data:generate
+    ```
 
-* Database initialization
+## During the talk
 
-* How to run the test suite
+- Run the server with
 
-* Services (job queues, cache servers, search engines, etc.)
+    ```bash
+    rails s
+    ```
+- Run the development console with
 
-* Deployment instructions
-
-* ...
+    ```bash
+    rails c
+    ```
