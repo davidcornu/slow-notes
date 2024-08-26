@@ -2,7 +2,14 @@
 
 <h2>Routes we'll be looking at</h2>
 <ul>
-    <li>Your todos</li>
+    <li>
+        Your todos
+        <% if User.first %> 
+            (<%= link_to "for first user", user_todos_path(User.first) %>)
+        <% else %>
+            (ℹ️ You need to run <code>rails sample_data:generate</code>)
+        <% end %>
+    </li>
     <li>Most prolific users</li>
 </ul>
 
