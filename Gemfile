@@ -42,4 +42,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "faker", "~> 3.4", :group => :development
+gem "faker", "~> 3.4", group: :development
