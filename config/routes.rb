@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   resources :comments
   resources :todos
-  resources :users
+
+  resources :users do
+    resources :todos, only: %i[index], controller: :user_todos
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

@@ -1,0 +1,33 @@
+<h1>Todos created by <%= @user.name %></h1>
+
+<ul>
+    <% @todos.each do |todo| %>
+        <li>
+            <%= todo.body %>
+            (<%= link_to("link", todo_path(todo)) %>)
+            <br>
+            <% if todo.comments.empty? %>
+                No comments yet
+            <% else %>
+                <details>
+                    <summary>
+                        <%= pluralize(todo.comments.count, "comment") %> 
+                        by
+                        <%= pluralize(todo.comments.flat_map(&:user).uniq.count, "user") %>
+                    </summary>
+
+                    <table>
+                        <% todo.comments.each do |comment| %>
+                                <tr>
+                                    <td><%= comment.body %></td>
+                                    <td><%= link_to(comment.user.name, user_path(comment.user)) %></td>
+                                    <td><%= l(comment.created_at, format: :short) %></td>
+                                    <td><%= link_to("Link", comments_path(comment)) %>
+                                </tr>
+                        <% end %>
+                    </table>
+                </details>
+            <% end %>
+        </li>
+    <% end %>
+</ul>
