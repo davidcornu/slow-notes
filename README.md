@@ -35,3 +35,13 @@ From the terminal you can then
     ```bash
     rails c
     ```
+
+## Useful links
+
+- Strict mode: https://www.bigbinary.com/blog/rails-6-1-adds-strict_loading-to-warn-lazy-loading-associations
+- `preload`, `eager_load`, `includes`, `joins`: https://www.bigbinary.com/blog/preload-vs-eager-load-vs-joins-vs-includes
+- `count`, `length`, `size`: https://medium.com/unagi/ruby-on-rails-length-vs-size-vs-count-with-examples-a32e17274c79
+0 
+- Arel: 
+    - https://github.com/rails/arel
+    - https://devhints.io/arel
